@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.list-circle-style {
+  list-style: circle;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.align-left {
+  text-align: left;
+}
