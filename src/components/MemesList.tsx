@@ -10,7 +10,7 @@ const chuckNorrisMemes = [
 const MemesList = () => {
   return (
     <div>
-      <h2 className="align-left">Меми про Чака Норріса</h2>
+      <h2 className="align-left no-margin">Меми про Чака Норріса</h2>
       <ul className="list-circle-style">
         {chuckNorrisMemes.map((meme) => (
           <li key={meme} style={{ color: "#2a9d8f", fontWeight: "bold" }}>

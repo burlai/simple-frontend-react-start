@@ -31,7 +31,7 @@ const people = [
 const PhonesList = () => {
   return (
     <div>
-      <h2 className="align-left">Номери телефонів</h2>
+      <h2 className="align-left no-margin">Номери телефонів</h2>
       <ul className="list-circle-style">
         {people.map((person, index, array) => {
           const isLast = index === array.length - 1;
