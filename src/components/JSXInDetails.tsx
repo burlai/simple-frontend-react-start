@@ -45,7 +45,6 @@ const JSXInDetails = (): React.ReactElement => {
         <div style={styles}>This is a styled div.</div>
 
         {/* Template literals inside markup: */}
-
         <div className="margin-top-10">
           {isLoggedIn
             ? `And the sum is: ${2 + 2 + 1} dollars`
