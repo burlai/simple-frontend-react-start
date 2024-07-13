@@ -66,3 +66,20 @@
 .margin-bottom-10 {
   margin-bottom: 10px;
 }
+
+.button {
+  margin: 8px;
+  padding: 8px 16px;
+  background-color: #5e548e;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: normal;
+}
+
+.input-text {
+  margin: 8px;
+  padding: 10px 8px;
+  border-radius: 6px;
+  border: 1px solid lightslategray;
+  display: block;
+}
