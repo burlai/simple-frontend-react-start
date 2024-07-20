@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: "Raleway", -apple-system, ui-sans-serif, system-ui, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .logo {
@@ -82,4 +84,38 @@
   border-radius: 6px;
   border: 1px solid lightslategray;
   display: block;
+}
+
+.page-header {
+  font-weight: 800;
+  text-align: center;
+  color: #ba43c1;
+  font-size: 42px;
+  color: #ba43c1;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.page-sub-header {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 0;
+  margin-top: 4px;
+  /* font-family: "Fira Code", monospace; */
+}
+
+.react-logo {
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+  height: auto;
+}
+
+.component-container {
+  border: 1px solid #ba43c1;
+  width: 100%;
+  height: 50%;
+  border-radius: 12px;
 }
