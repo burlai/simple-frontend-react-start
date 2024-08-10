@@ -119,3 +119,17 @@
   height: 50%;
   border-radius: 12px;
 }
+
+.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.light {
+  background-color: #f9f9f9;
+}
+
+.display-block {
+  display: block;
+  margin-bottom: 10px;
+}

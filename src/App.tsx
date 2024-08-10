@@ -1,18 +1,30 @@
+import { useState } from "react";
 import "./App.css";
+import TestWithReference from "./components/TestReference";
 
-function App() {
+export default function App() {
+  const [isDark, setIsDark] = useState(false);
+
   return (
     <>
-      <h1 className="page-header">React українською</h1>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-        alt="React Logo"
-        className="react-logo"
-      />
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            checked={isDark}
+            onChange={(e) => setIsDark(e.target.checked)}
+          />
+          Dark mode
+        </label>
+      </div>
 
-      <div className="component-container"></div>
+      <hr />
+
+      <TestWithReference
+        referrer="wizard_of_oz"
+        productId="123"
+        theme={isDark ? "dark" : "light"}
+      />
     </>
   );
 }
-
-export default App;
