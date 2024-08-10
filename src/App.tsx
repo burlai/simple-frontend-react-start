@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./App.css";
 
 // import CalculationWithoutMemo from "./components/CalculationWithoutMemo";
-import UseMemoCalculation from "./components/UseMemoCalculation";
+// import UseMemoCalculation from "./components/UseMemoCalculation";
+import CalculationWithoutMemo from "./components/CalculationWithoutMemo";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,7 +24,8 @@ function App() {
       />
 
       <div className="component-container">
-        {/* {sum} */}
+        <div>Counter value: {count}</div>
+
         <button className="button" onClick={() => setCount(count + 1)}>
           Re-render
         </button>
@@ -32,7 +34,8 @@ function App() {
           Change the array
         </button>
 
-        <UseMemoCalculation numbers={myArray} />
+        {/* <UseMemoCalculation numbers={myArray} /> */}
+        <CalculationWithoutMemo numbers={myArray} />
       </div>
     </>
   );
