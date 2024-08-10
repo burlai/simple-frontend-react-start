@@ -13,5 +13,4 @@ const UseMemoCalculation: React.FC<UseMemoCalculation> = ({ numbers }) => {
 
   return <div>Sum: {sum}</div>;
 };
-
 export default UseMemoCalculation;

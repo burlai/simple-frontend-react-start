@@ -23,7 +23,8 @@ function App() {
       />
 
       <div className="component-container">
-        {/* {sum} */}
+        <div>Counter value: {count}</div>
+
         <button className="button" onClick={() => setCount(count + 1)}>
           Re-render
         </button>

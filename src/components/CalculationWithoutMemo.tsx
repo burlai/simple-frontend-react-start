@@ -10,6 +10,7 @@ const CalculationWithoutMemo: React.FC<CalculationWithoutMemoProps> = ({
   console.log("Calculating...");
 
   const sum = numbers.reduce((total, num) => total + num, 0);
+
   return <div>Sum: {sum}</div>;
 };
 
