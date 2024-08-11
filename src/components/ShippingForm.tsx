@@ -52,7 +52,6 @@ const ShippingForm: React.FC<ShippingFormProps> = ({ onSubmit }) => {
       </section>
 
       <section>
-        <h3>Form</h3>
         <label className="display-block">
           Street:
           <input name="street" />

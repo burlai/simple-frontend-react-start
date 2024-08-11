@@ -19,7 +19,7 @@ const TestWithReference = ({
   theme,
 }: TestWithReferenceProps) => {
   const handleSimpleSubmit = (orderDetails: unknown) => {
-    console.log("dummy handleSubmit");
+    console.log("handleSimpleSubmit called");
 
     post("/product/" + productId + "/buy", {
       referrer,
@@ -29,7 +29,7 @@ const TestWithReference = ({
 
   const handleUseCallbackSubmit = useCallback(
     (orderDetails: unknown) => {
-      console.log("handleUseCallbackSubmit");
+      console.log("handleUseCallbackSubmit called");
 
       post("/product/" + productId + "/buy", {
         referrer,
@@ -60,13 +60,12 @@ const TestWithReference = ({
   }
 
   // Update the refs with the current functions references:
-
   prevHandleUseCallbackSubmitRef.current = handleUseCallbackSubmit;
   prevHandleSimpleSubmitRef.current = handleSimpleSubmit;
 
   return (
     <div className={theme}>
-      <ShippingForm onSubmit={handleUseCallbackSubmit} />
+      <ShippingForm onSubmit={handleSimpleSubmit} />
     </div>
   );
 };

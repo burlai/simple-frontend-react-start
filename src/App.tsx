@@ -4,6 +4,7 @@ import TestWithReference from "./components/TestReference";
 
 export default function App() {
   const [isDark, setIsDark] = useState(false);
+  const [randomNewReferrer, setRandomNewReferrer] = useState("12345");
 
   return (
     <>
@@ -12,7 +13,10 @@ export default function App() {
           <input
             type="checkbox"
             checked={isDark}
-            onChange={(e) => setIsDark(e.target.checked)}
+            onChange={(e) => {
+              setIsDark(e.target.checked);
+              setRandomNewReferrer(Math.random().toString());
+            }}
           />
           Dark mode
         </label>
@@ -21,7 +25,8 @@ export default function App() {
       <hr />
 
       <TestWithReference
-        referrer="wizard_of_oz"
+        referrer={randomNewReferrer}
+        // referrer="wizard_of_oz"
         productId="123"
         theme={isDark ? "dark" : "light"}
       />
