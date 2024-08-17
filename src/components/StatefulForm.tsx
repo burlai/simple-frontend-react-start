@@ -38,6 +38,16 @@ const reducer = (state: State, action: Action): State => {
 const StatefulForm: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch({ type: "SET_USERNAME", payload: event.target.value });
+    dispatch({ type: "SET_ERROR", payload: false });
+  };
+
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch({ type: "SET_EMAIL", payload: event.target.value });
+    dispatch({ type: "SET_ERROR", payload: false });
+  };
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -54,15 +64,7 @@ const StatefulForm: React.FC = () => {
     }, 3000);
   };
 
-  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: "SET_USERNAME", payload: event.target.value });
-    dispatch({ type: "SET_ERROR", payload: false });
-  };
-
-  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: "SET_EMAIL", payload: event.target.value });
-    dispatch({ type: "SET_ERROR", payload: false });
-  };
+  console.log(state);
 
   return (
     <form onSubmit={handleSubmit}>
