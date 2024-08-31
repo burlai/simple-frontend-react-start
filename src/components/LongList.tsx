@@ -1,5 +1,7 @@
 import React, { useState, useTransition } from "react";
 
+type DataArray = { id: number; name: string }[];
+
 export const LongList: React.FC = () => {
   //   const [isPending, startTransition] = useTransition();
   const [filterInputValue, setFilterInputValue] = useState<string>("");
@@ -9,9 +11,12 @@ export const LongList: React.FC = () => {
     name: `Item ${i}`,
   }));
 
-  const filteredItems = items.filter((item) =>
-    item.name.toLowerCase().includes(filterInputValue.toLowerCase())
-  );
+  const filterItems = (dataArray: DataArray, filterBy: string) =>
+    dataArray.filter((item) =>
+      item.name.toLowerCase().includes(filterBy.toLowerCase())
+    );
+
+  const filteredItems = filterItems(items, filterInputValue);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // startTransition(() => {
