@@ -1,4 +1,5 @@
 import "./App.css";
+import { LongList } from "./components/LongList";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
         className="react-logo"
       />
 
-      <div className="component-container"></div>
+      <div className="component-container">
+        <LongList />
+      </div>
     </>
   );
 }
