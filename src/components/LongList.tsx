@@ -2,28 +2,28 @@ import React, { useState, useTransition } from "react";
 
 export const LongList: React.FC = () => {
   //   const [isPending, startTransition] = useTransition();
-  const [filter, setFilter] = useState<string>("");
+  const [filterInputValue, setFilterInputValue] = useState<string>("");
 
   const items = Array.from({ length: 25000 }, (_, i) => ({
     id: i,
     name: `Item ${i}`,
   }));
 
+  const filteredItems = items.filter((item) =>
+    item.name.toLowerCase().includes(filterInputValue.toLowerCase())
+  );
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // startTransition(() => {
-    setFilter(event.target.value);
+    setFilterInputValue(event.target.value);
     // });
   };
-
-  const filteredItems = items.filter((item) =>
-    item.name.toLowerCase().includes(filter.toLowerCase())
-  );
 
   return (
     <div>
       <input
         type="text"
-        value={filter}
+        value={filterInputValue}
         onChange={handleInputChange}
         placeholder="Filter items..."
       />
