@@ -13,9 +13,9 @@ function App() {
     inputRef.current?.clear();
   };
 
-  // const handleValue = () => {
-  //   inputRef.current?.setValue();
-  // };
+  const handleValue = () => {
+    inputRef.current?.setValue();
+  };
 
   return (
     <>
@@ -36,9 +36,9 @@ function App() {
           Clear input
         </button>
 
-        {/* <button className="button" onClick={handleValue}>
+        <button className="button" onClick={handleValue}>
           Set value
-        </button> */}
+        </button>
       </div>
     </>
   );

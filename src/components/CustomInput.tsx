@@ -3,7 +3,7 @@ import { useImperativeHandle, forwardRef, useRef } from "react";
 export type CustomInputHandle = {
   focus: () => void;
   clear: () => void;
-  //   setValue: () => void;
+  setValue: () => void;
 };
 
 export const CustomInput = forwardRef<CustomInputHandle>((_, ref) => {
@@ -22,11 +22,11 @@ export const CustomInput = forwardRef<CustomInputHandle>((_, ref) => {
           inputRef.current.value = "";
         }
       },
-      //   setValue: () => {
-      //     if (inputRef.current) {
-      //       inputRef.current.value = "some text";
-      //     }
-      //   },
+      setValue: () => {
+        if (inputRef.current) {
+          inputRef.current.value = "some text";
+        }
+      },
     }),
     []
   );
